@@ -1,0 +1,146 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>African Caribbean Association</title>
+ <link rel="stylesheet" href="nivo-slider.css" media="screen">
+ <link rel="stylesheet" type="text/css" href="aca.css">
+ <link href=' http://fonts.googleapis.com/css?family=Elsie+Swash+Caps' rel='stylesheet' type='text/css'>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+ <link rel="icon" type="image/png" href="images/icon.png"/>
+ <script src="js/jquery.nivo.slider.pack.js"></script>
+
+<script type="text/javascript">
+$(window).load(function() {
+$('#slider').nivoSlider({
+	   effect:'fold',
+	   directionNavHide:true,
+	 
+ }); 
+ });
+</script> 
+<script type="text/javascript"> 
+ 
+  function display()
+  {
+    $("#effects").fadeOut(3000,function(){
+	$( ".headercontent" ).animate({
+      top: "+=50",
+	  left:"+=20"
+  }, 3000, function() {
+    // Animation complete.
+	  $(this).fadeOut(2000,function(){ $(".content").fadeOut(2000,function(){display1()})});});});
+	  
+   }
+   
+   function display1()
+  {
+     $(".upcomingevents").addClass("content1");
+	 $(".content1").css({"display":"inherit"});
+	 $(".headercontent1").css({"margin-top":"120px"});
+	  $("#effects1").css({"margin-top":"200px"});
+	 $( ".headercontent1" ).fadeIn().animate({
+        top:"10"
+	 
+   },3000, function() {
+	 $("#effects1").fadeIn(3000,function(){
+     $(this).fadeOut(3000,function(){ $(".headercontent1").animate({ left:"-10"},function(){$(".headercontent1").fadeOut(2000,function(){display2()})});});});});
+	 }
+	   
+	   function display2()
+	   {
+	      $(".content").fadeIn(1000,function(){
+		  $( ".headercontent" ).fadeIn().animate({
+	         top: "+=-50",
+			 left:"+=-20"
+	 
+           }, 3000, function() {$("#effects").fadeIn(3000,function(){display()});});
+	    });
+	   }
+
+	 
+   
+   $(document).ready(function() {
+	   display();
+	});
+	
+</script>
+</head>
+ 
+ <body>
+    <div class="centerdiv">
+	   <div class="topposition">
+	      <div class="logodivision">
+	         <img src="images/logo.png" width="205px"/>
+	     </div>
+	     <div class="topmenu">
+	        <ul class="listing">
+		       <li id="list1"><a href="aca.html">Home</a></li>
+		       <li><a href="members.html">Members</a></li>
+		       <li><a href="entertainment.html">Entertainment</a></li>
+		       <li><a href="about.html">&nbsp;&nbsp;About</a></li>
+		    </ul>
+	     </div>
+	   </div>
+	   <div id="slider">
+          <img src="images/aca_pics1.jpg" alt="" title="Fun at Campus Creek"/>
+          <img src="images/aca_pics2.jpg" alt="" title="ISO Event" />
+          <img src="images/aca_pics3.jpg" alt="" title="ISO Nite" />
+          <img src="images/aca_pics4.jpg" alt="" title="OMADDE" />
+	   </div>
+	   <div class="sidemenu">
+		  <ul class="listed">
+		    <li><a href="constitution.html">Constitution</a></li>
+		    <li><a href="archive.html">Archive</a></li>
+		    <li><a href="contact.html">Contact Us</a></li>
+		  </ul>
+	   </div>
+	   <div class="copyrightdivision">
+	      <h4>&copy;COPYRIGHT 2013 ALL RIGHTS RESERVED OLEMISS.EDU<h4>
+	   </div>
+	   <div class="contentdivision">
+		  <div class="upcomingevents">
+		    <h1>Upcoming</br>Events</h1>
+			<div class="content">
+			<div class="headercontent">
+			   <div class="date">
+			   <div class="day" id="day">FRI</div>
+			   <h3 id="date">9|6</h3>
+			   </div>
+			  <h2 class="upcoming" id="event">Meet and Greet</h2>
+			  <p>
+			  <h5 class="ongoing" id="location">Student Union Lobby </h5>
+			  </div>
+			  <h3  id="effects" title="effected">This event is for introduction between members</h3>
+		  </div>
+		  </div>
+		  <div class="content1">
+		  <div class="headercontent1">
+			   <div class="date1">
+			   <div class="day" id="day1">SAT</div>
+			   <h3 id="date1">9|22</h3>
+			   </div>
+			  <h2 class="upcoming1" id="event1">ACA Meeting</h2>
+			  <p>
+			  <h5 class="ongoing1" id="location1">Student Union Room 405 </h5>
+			  </div>
+			  <h3  id="effects1" title="effected1">First ACA Meeting</h3>
+		  
+		  </div> 
+		  <div class="latestnews">
+		     <h1>Latest</br>News</h1>
+
+			 <div>
+			<img src="images/president.jpg" width="100px" height="150px" align="left"/></div>
+			 <h3>An ACA meet and greet took place on the 17th of August in the Student union Lobby. During this meet and greet, pleasantries were
+			 exchanged.</h3>
+			 </div>
+			
+		  </div>
+		</div>
+		  
+		 
+	</div>
+	
+   
+ </body>
+ </html>
